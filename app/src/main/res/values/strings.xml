@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">RecipeCatalog</string>
+    <string name="app_name">Recipe catalog</string>
+    <string name="recipe_image">Recipe display</string>
+    <string name="back">Back</string>
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="instructions">Instructions</string>
 </resources>

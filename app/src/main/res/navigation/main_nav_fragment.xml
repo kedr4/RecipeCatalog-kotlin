@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/catalogFragment">
+
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.example.recipecatalog.ui.fragment.CatalogFragment"
+        android:label="Catalog">
+
+        <action
+            android:id="@+id/action_catalogFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.example.recipecatalog.ui.fragment.RecipeDetailFragment"
+        android:label="Recipe Detail">
+        <argument
+            android:name="recipe"
+            app:argType="com.example.recipecatalog.model.Recipe"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.recipecatalog.ui.fragment.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoriteFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.recipecatalog.ui.fragment.ProfileFragment"
+        android:label="Profile">
+        <action
+            android:id="@+id/action_profileFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_profileViewFragment"
+            app:destination="@id/profileViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileViewFragment"
+        android:name="com.example.recipecatalog.ui.fragment.ProfileViewFragment"
+        android:label="Profile">
+        <action
+            android:id="@+id/action_profileViewFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.example.recipecatalog.ui.fragment.ProfileEditFragment"
+        android:label="Edit Profile">
+        <action
+            android:id="@+id/action_profileEditFragment_to_profileViewFragment"
+            app:destination="@id/profileViewFragment" />
+    </fragment>
+
+
+
+
+</navigation>
