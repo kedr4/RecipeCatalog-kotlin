@@ -38,7 +38,7 @@ class RecipeAdapter(
             val descriptionBuilder = StringBuilder()
 
             if (recipe.timeEstimated > 0) {
-                descriptionBuilder.append("${recipe.timeEstimated} мин")
+                descriptionBuilder.append("${recipe.timeEstimated} min")
             }
 
             if (recipe.ingredients.isNotBlank()) {

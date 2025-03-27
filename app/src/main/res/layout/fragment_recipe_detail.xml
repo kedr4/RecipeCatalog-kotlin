@@ -81,7 +81,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -109,6 +110,51 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorHintLight"
                         android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/veganFlag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:background="@drawable/dietary_flag_background"
+                            android:paddingHorizontal="6dp"
+                            android:paddingVertical="2dp"
+                            android:text="Vegan"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/glutenFreeFlag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:background="@drawable/dietary_flag_background"
+                            android:paddingHorizontal="6dp"
+                            android:paddingVertical="2dp"
+                            android:text="GF"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/dairyFreeFlag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/dietary_flag_background"
+                            android:paddingHorizontal="6dp"
+                            android:paddingVertical="2dp"
+                            android:text="DF"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <TextView
@@ -119,80 +165,6 @@
                     android:lineSpacingExtra="4dp"
                     android:textColor="@color/colorText"
                     android:textSize="16sp" />
-
-                <LinearLayout
-                    android:id="@+id/dietaryFlagsContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:id="@+id/veganIcon"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginEnd="4dp"
-                        android:visibility="gone"
-                        android:src="@drawable/ic_vegan"
-                        app:tint="@color/colorPrimary" />
-
-                    <TextView
-                        android:id="@+id/veganText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:visibility="gone"
-                        android:text="Vegan"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="14sp" />
-
-                    <ImageView
-                        android:id="@+id/glutenFreeIcon"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginEnd="4dp"
-                        android:visibility="gone"
-                        android:src="@drawable/ic_gluten_free"
-                        app:tint="@color/colorPrimary" />
-
-                    <TextView
-                        android:id="@+id/glutenFreeText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:visibility="gone"
-                        android:text="Gluten Free"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="14sp" />
-
-                    <ImageView
-                        android:id="@+id/dairyFreeIcon"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginEnd="4dp"
-                        android:visibility="gone"
-                        android:src="@drawable/ic_dairy_free"
-                        app:tint="@color/colorPrimary" />
-
-                    <TextView
-                        android:id="@+id/dairyFreeText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dairy Free"
-                        android:visibility="gone"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/recipeDetailDietaryTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="16sp"
-                    android:textStyle="italic" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

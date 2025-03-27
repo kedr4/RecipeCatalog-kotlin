@@ -40,7 +40,13 @@ class RecipeDetailFragment : Fragment(R.layout.fragment_recipe_detail) {
         recipeInstructionsTextView.text = recipe.instructions
         recipeCategoryTextView.text = recipe.category
         recipeTimeTextView.text = recipe.timeEstimated.toString()
+        val veganFlag = view.findViewById<TextView>(R.id.veganFlag)
+        val glutenFreeFlag = view.findViewById<TextView>(R.id.glutenFreeFlag)
+        val dairyFreeFlag = view.findViewById<TextView>(R.id.dairyFreeFlag)
 
+        veganFlag.visibility = if (recipe.isVegan) View.VISIBLE else View.GONE
+        glutenFreeFlag.visibility = if (recipe.isGlutenFree) View.VISIBLE else View.GONE
+        dairyFreeFlag.visibility = if (recipe.isDairyFree) View.VISIBLE else View.GONE
 
         updateLikeIcon(recipe.isFavorite)
 
